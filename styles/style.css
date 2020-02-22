@@ -1,11 +1,11 @@
+div, header, main, footer, img, p {
+  border: 1px solid red;
+}
+
 .page {
     min-width: 1100px;
-    /* мы ещё не умеем делать мобильную версию сайта, */
-    /* поэтому выше установлена минимальная ширина страницы */
     max-width: 1600px;
-    /* выше установили ограничение по максимальной ширине */
     margin: 0 auto;
-    /* выше для экранов больше 1600px отцентрировали весь контент */
     font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -13,19 +13,109 @@
     height: 100vh;
     min-height: 600px;
     max-height: 756px;
-    /* выше установили ограничения для секции */
+    display: flex;
+    position: relative;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.header__title {
+    align-self: center;
+    margin-left: 64px;
+    font-size: 102px;
+    font-weight: bold;
+    line-height: 96px;
+    width: 730px;
+}
+
+.header__subtitle {
+    z-index: 1;
+    position: absolute;
+    font-size: 18px;
+    line-height: 25px;
+    width: 388px;
+    left: 64px;
+    bottom: 30px;
+}
+
+.header__link {
+    color: #2F80ED;
+    text-decoration: none;
+}
+
+.header__main-illustration {
+    width: 765px;
+    height: 608px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
 .header__square-pic {
     height: 568px;
     width: 568px;
+    background-color: #2F80ED;
+    position: absolute;
+    top: 64px;
+    right: 0px;
+    z-index: -1;
 }
 
-/* и элемента с модификатором вида ключ-значение */
+.logo {
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 183px;
+  height: 32px;
+}
+
+.logo_place_header {
+  position: absolute;
+  top: 30px;
+  left: 64px;
+  z-index: 1;
+}
+
+.description {
+    display: flex;
+}
+
+.two-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 100px auto;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.two-columns__brief {
+    line-height: 1.2;
+    font-size: 18px;
+    width: 175px;
+    color: #2F80ED;
+}
+
+.two-columns__main-text {
+    line-height: 34px;
+    font-size: 24px;
+    width: 80%;
+    min-width: 784px;
+}
+
+.two-columns__span-accent {
+    font-weight: bold;
+
+}
+
+.two-columns__paragraph {
+    margin: 0px 0px 30px 0px;
+}
+
+.two-columns__paragraph:last-of-type {
+  margin: 0px;
+}
 .table__cell_theme_dark {
-    width: 200px;
-    color: white;
-    margin-right: 0;
-    margin-top: 80px;
+  width: 200px;
+  color: white;
+  margin-right: 0;
+  margin-top: 80px;
 }
