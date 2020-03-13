@@ -1,3 +1,23 @@
+@keyframes rotation {
+  from {
+    transform: rotate(-15deg);
+  }
+
+  to {
+    transform: rotate(345deg);
+  }
+}
+
+@keyframes rotation-triangle {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .page {
     min-width: 1100px;
     max-width: 1600px;
@@ -22,7 +42,7 @@
     font-size: 102px;
     font-weight: bold;
     line-height: 96px;
-    width: 730px;
+    max-width: 730px;
 }
 
 .header__subtitle {
@@ -30,7 +50,7 @@
     position: absolute;
     font-size: 18px;
     line-height: 25px;
-    width: 388px;
+    max-width: 388px;
     left: 64px;
     bottom: 30px;
     font-weight: normal;
@@ -43,7 +63,8 @@
 }
 
 .header__link:hover {
-    color: #000000;
+  opacity: 50%;
+  transition: 1s;
 }
 
 .header__main-illustration {
@@ -62,6 +83,8 @@
     top: 64px;
     right: 0px;
     z-index: -1;
+    transform: rotate(-15deg);
+    animation: rotation 20s linear infinite;
 }
 
 .logo {
@@ -98,7 +121,7 @@
 .two-columns__brief {
     line-height: 1.2;
     font-size: 18px;
-    width: 175px;
+    max-width: 175px;
     color: #2F80ED;
     margin: 0px;
     font-weight: normal;
@@ -197,8 +220,7 @@
 
 .feinman {
     position: relative;
-    margin: 100px 0px 0px;
-    padding: 100px 0px 0px;
+    margin: 0px 0px 100px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -211,7 +233,7 @@
     line-height: 1.15;
     font-size: 120px;
     font-weight: bold;
-    width: 648px;
+    max-width: 648px;
     text-align: center;
     margin: 0px;
 }
@@ -234,7 +256,8 @@
 }
 
 .feinman__link:hover {
-    color: #2F80ED;
+  opacity: 50%;
+  transition: 1s;
 }
 
 .feinman__illustration {
@@ -264,6 +287,7 @@
     background-image: url(../images/triangle.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    animation: rotation-triangle 20s linear infinite;
 }
 
 .footer {
@@ -332,7 +356,8 @@
 }
 
 .footer__column-link:hover {
-    color: #2F80ED;
+  opacity: 50%;
+  transition: 1s;
 }
 
 .footer__social-icon {
@@ -341,4 +366,186 @@
     height: 16px;
     margin: 0px 10px 0px 0px;
     vertical-align: -2px;
+}
+
+.technics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0px auto 100px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 920px;
+
+}
+
+.cards__item {
+  max-width: 240px;
+  margin: 60px 100px 0px 0px;
+
+}
+
+.cards__item:nth-of-type(3n) {
+  margin: 60px 0px 0px 0px;
+}
+
+.cards__img {
+  width: 160px;
+  height: 160px;
+  margin: 0px 40px;
+  border-radius: 50%;
+
+}
+
+.cards__title {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 43px 0px 16px;
+  text-align: center;
+}
+
+.cards__description {
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0px;
+  text-align: center;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.video__iframes {
+  margin: 50px 0px -60px;
+
+}
+
+.video__iframe {
+  width: 515px;
+  height: 316px;
+  margin: 0px 20px 0px 0px;
+  border: 0px;
+}
+
+.oakley {
+  background-color: #F2F2F2;
+  overflow: hidden;
+}
+
+.two-columns_section_oakley {
+  margin: 160px auto 80px;
+}
+
+.khan {
+  margin: 100px 0px 0px;
+  padding: 105px 0px 0px;
+  background-color: #F2F2F2;
+
+}
+
+.khan__container {
+  width: 80%;
+  margin: 0px auto 0px;
+
+}
+
+.khan__author {
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0px;
+
+}
+
+.khan__title {
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.khan__quote {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 50px 0px 36px;
+  max-width: 790px;
+
+}
+
+.khan__quote-author {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0px;
+
+}
+
+.khan__quote-author-subline {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 10px 0px 68px;
+
+}
+
+.khan__book-container {
+  display: flex;
+
+ }
+
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+  margin: 0px 20px 0px 0px;
+  object-fit: cover;
+  object-position: left top;
+
+}
+
+.khan__buy-link {
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #2F80ED;
+  text-decoration: none;
+  align-self: baseline;
+}
+
+.khan__buy-link:hover {
+  opacity: 50%;
+  transition: 1s;
+}
+
+.resources {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0px 0px;
+}
+
+.resources__logo-zone {
+  width: 1100px;
+  margin: 80px 0px 217px;
+
+}
+
+.resources__logo {
+  margin: 0px;
+  width: 270px;
+  height: 38px;
+}
+
+.resources__logo:hover {
+  opacity: 50%;
+  transition: 1s;
 }
