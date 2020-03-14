@@ -9,8 +9,8 @@
 @import url(./__title/khan__title.css);
 
 .khan {
-  margin: 100px 0px 0px;
-  padding: 105px 0px 0px;
+  margin: 100px 0 0;
+  padding: 105px 0 0;
   background-color: #F2F2F2;
 }
 
