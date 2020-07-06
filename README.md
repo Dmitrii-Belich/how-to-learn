@@ -1,4 +1,4 @@
-# [Проект "Russian Trevel"](https://dmitrii-belich.github.io/how-to-learn/)
+# [Проект "Научиться учиться"](https://dmitrii-belich.github.io/how-to-learn/)
 
 ## Описание:
 Проектная работа создана с целью закрепления на практике навыков в статичной верстке и создании анимаций.
